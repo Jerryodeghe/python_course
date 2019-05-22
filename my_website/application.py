@@ -11,18 +11,16 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-def greeting():
+def index():
     return render_template("index.html")
 
-#Implement the routes below to handle the request 
-#for "about" and "projects" pages
 @app.route("/about")
 def about():
-    pass
+    return render_template("about.html")
 
 @app.route("/projects")
 def projects():
-    pass
+    return render_template("projects.html")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
